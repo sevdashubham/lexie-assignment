@@ -33,7 +33,7 @@ const createApolloClient = (ctx?: GetServerSidePropsContext) => {
 
   const authLink = setContext((_, { headers }) => {
     // Get the authentication token from cookies
-    const token = process.env.GRAPH_AUTH_TOKEN
+    const token = process.env.NEXT_PUBLIC_GRAPH_AUTH_TOKEN
 
     return {
       headers: {
